@@ -62,6 +62,8 @@ while running:
     # bounce ball against edges of screen
     if ball_x < 0 or ball_x + BALL_WIDTH > SCREEN_WIDTH:
       ball_speed_x = ball_speed_x * -1
+    if ball_y < 0 or ball_y + BALL_HEIGHT > SCREEN_HEIGHT:
+      ball_speed_y = ball_speed_y * -1
 
     # clear screen
     screen.fill('black') 
