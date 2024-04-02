@@ -21,6 +21,9 @@ BALL_HEIGHT = 16
 ball_x = 0
 ball_speed_x = 6
 
+ball_y = 0
+ball_speed_y = 6
+
 #
 # init game
 #
@@ -55,6 +58,7 @@ while running:
     
     # move ball
     ball_x = ball_x + ball_speed_x
+    ball_y = ball_y + ball_speed_y
     # bounce ball against edges of screen
     if ball_x < 0 or ball_x + BALL_WIDTH > SCREEN_WIDTH:
       ball_speed_x = ball_speed_x * -1
@@ -63,7 +67,7 @@ while running:
     screen.fill('black') 
 
     # draw ball
-    screen.blit(ball_img, (ball_x, 0))
+    screen.blit(ball_img, (ball_x, ball_y))
 
     # show screen
     pygame.display.flip() 
